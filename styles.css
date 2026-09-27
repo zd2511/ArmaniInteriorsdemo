@@ -51,3 +51,10 @@ body{transition:opacity .22s ease}
 .line-button:hover{transform:translateY(-2px)}
 .portfolio-item img{will-change:transform}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js-ready .reveal,.js-ready .reveal-section,.js-ready .detail-service,.js-ready .quote-band,.js-ready .portfolio-item,.js-ready .value-grid article,.js-ready .contact-details,.js-ready .statement,.js-ready .about-editorial{opacity:1!important;transform:none!important;transition:none!important}.hero-copy,.hero h1,.hero .eyebrow,.hero .line-button{animation:none!important}.detail-image,.detail-image img{clip-path:none!important;transform:none!important;transition:none!important}}
+
+/* motion-auto is injected by script.js for consistent animation across every page */
+.js-ready .motion-auto{opacity:0;transform:translate3d(0,42px,0);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--motion-delay,0ms)}
+.js-ready .motion-auto.visible{opacity:1;transform:none}
+.hero-content.reveal{transform:translateY(calc(-35% + 48px))}.hero-content.reveal.visible{transform:translateY(-35%)}
+.inner-hero-content.reveal{transform:translateY(calc(-30% + 48px))}.inner-hero-content.reveal.visible{transform:translateY(-30%)}
+@media(prefers-reduced-motion:reduce){.js-ready .motion-auto{opacity:1!important;transform:none!important;transition:none!important}}
